@@ -1,8 +1,10 @@
 #include <cstdlib>
  #include "genMino.h"
- #define NUM_MINO 2
+ #define NUM_MINO 4
  #define MINO_S 0
  #define MINO_I 1
+ #define MINO_O 2
+ #define MINO_T 3
 Mino * genMino()
  {
  int mino_type;
@@ -17,6 +19,13 @@ Mino * genMino()
  case MINO_I:
  ptr = new MinoI;
  break;
+ case MINO_O:
+ ptr = new MinoO;
+ break;
+ case MINO_T:
+ ptr = new MinoT;
+ break;
+ 
  }
  return ptr;
  }
